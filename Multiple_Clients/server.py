@@ -16,7 +16,7 @@ def socket_create():
         global host
         global port
         global s
-        host = ''
+        host = '192.168.0.5'
         port = 9999
         s = socket.socket()
     except socket.error as msg:
@@ -129,9 +129,14 @@ def work():
 #Each list item = new job
 def create_jobs():
     for x in JOB_NUMBER:
-        queue.put()
+        queue.put(x)
     queue.join()
 
 
 create_workers()
 create_jobs()
+
+#commands =
+#list - servers
+#quit - quit terminal/program
+#
